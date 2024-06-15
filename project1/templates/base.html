@@ -4,7 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>
+        {% block title %}
+            PAGE TITLE
+        {% endblock %}
+    </title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <script src="{% static 'js/utils.js' %}"></script>
 </head>

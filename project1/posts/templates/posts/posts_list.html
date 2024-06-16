@@ -5,5 +5,14 @@
 {% endblock %}
 
 {% block content %}
-    Post List
+    <h1>Post List</h1>
+    <ul>
+    {% for post in posts %}
+        <li>
+            <h2>{{post.title}}</h2>
+            <p>{{post.date}}</p>
+            <p>{{post.body}}</p>
+        </li>
+    {% endfor %}
+    </ul>
 {% endblock %}

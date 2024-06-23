@@ -13,6 +13,19 @@
     <script src="{% static 'js/utils.js' %}"></script>
 </head>
 <body>
+    <header>
+        {% if user.is_authenticated %}
+            <form
+                action="/users/logout/"
+                method="post"
+            >
+                {% csrf_token %}
+                <button>logout</button>
+            </form>
+        {% else %}
+            <a href="/users/login">login</a>
+        {% endif %}
+    </header>
     {% block content %}
 
     {% endblock %}

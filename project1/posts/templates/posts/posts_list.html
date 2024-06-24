@@ -9,9 +9,7 @@
     <ul>
     {% for post in posts %}
         <li>
-            <h2><a href="{% url 'page' slug=post.slug %}">{{post.title}}</a></h2>
-            <p>{{post.date}}</p>
-            <p>{{post.body}}</p>
+            {% include "posts/post.html" with post=post %}
         </li>
     {% endfor %}
     </ul>

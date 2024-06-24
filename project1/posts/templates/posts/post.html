@@ -1,0 +1,10 @@
+{% if on_post_page %}
+    <h1>{{post.title}}</h1>
+{% else %}
+    <h2><a href="{% url 'page' slug=post.slug %}">{{post.title}}</a></h2>
+{% endif %}
+<p>{{post.date}}</p>
+<p>{{post.body}}</p>
+{% if on_post_page %}
+    <img src="{{ post.banner.url }}"/>
+{% endif %}

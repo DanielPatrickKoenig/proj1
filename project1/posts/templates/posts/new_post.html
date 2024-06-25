@@ -6,4 +6,13 @@
 
 {% block content %}
     <h1>New Post</h1>
+    <form
+        action="/posts/new-post/"
+        method="post"
+        enctype="multipart/form-data"
+    >
+        {% csrf_token %}
+        {{ form }}
+        <button>Submit</button>
+    </form>
 {% endblock %}

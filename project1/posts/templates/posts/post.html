@@ -3,7 +3,7 @@
 {% else %}
     <h2><a href="{% url 'page' slug=post.slug %}">{{post.title}}</a></h2>
 {% endif %}
-<p>{{post.date}}</p>
+<p>{{post.date}} by {{ post.author }}</p>
 <p>{{post.body}}</p>
 {% if on_post_page %}
     <img src="{{ post.banner.url }}"/>
